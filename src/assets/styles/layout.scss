@@ -1,0 +1,179 @@
+/**
+ * @file 常用通用样式 flex 布局
+ * @date 2022-10-13
+ */
+
+[class*="flex-row"] {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+[class*="flex-col"] {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+@each $key in flex-start, flex-end, center, space-between, space-around {
+    .flex-row-#{$key},
+    .flex-col-#{$key} {
+        justify-content: #{$key};
+    }
+
+    // 多根交叉轴的对齐方式，一根轴线不起作用
+    .content-#{$key} {
+        align-content: #{$key};
+    }
+}
+
+// align-items 布局
+@each $key in flex-start, flex-end, center, baseline, stretch {
+    // 交叉轴对齐方式单行文本
+    .items-#{$key} {
+        align-items: #{$key};
+    }
+
+    // 单个属性对齐方式
+    .self-#{$key} {
+        align-self: #{$key};
+    }
+}
+
+@each $key in nowrap, wrap, wrap-reverse {
+    .flex-#{$key} {
+        flex-wrap: #{$key};
+    }
+}
+
+.flex1 {
+    flex: 1; // flex:<number> 1 0 // flex-grow flex-shrink flex-basis
+}
+
+.shrink0 {
+    flex-shrink: 0;
+}
+
+// vertical align
+@each $key in top, middle, bottom {
+    .align-#{$key} {
+        vertical-align: #{$key};
+    }
+}
+
+// text align
+@each $key in left, center, right {
+    .text-align-#{$key} {
+        text-align: #{$key};
+    }
+}
+
+// 鼠标效果
+@each $key in default, pointer, not-allowed, progress {
+    .cursor-#{$key} {
+        cursor: #{$key};
+    }
+}
+
+// 字体weight
+@each $key in normal, bold, 400, 500, 600 {
+    .weight-#{$key} {
+        font-weight: #{$key};
+    }
+}
+
+// 文字颜色和背景颜色
+@each $key in "main" {
+    .text-#{$key} {
+        color: var(--#{$key});
+    }
+
+    .bg-#{$key} {
+        background-color: var(--#{$key});
+    }
+}
+
+// border-radius
+@each $key in 4, 6, 8, 12 {
+    .radius#{$key} {
+        border-radius: #{$key}px;
+    }
+}
+
+// 超出多少行隐藏显示...
+@each $key in 1, 2, 3 {
+    .ellipsis#{$key} {
+        display: -webkit-box; // stylelint-disable-line
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: #{$key};
+        -webkit-box-orient: vertical;
+    }
+}
+
+// 常用间距
+@each $key in 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40 {
+    .m#{$key} {
+        margin: #{$key}px;
+    }
+
+    .mt#{$key} {
+        margin-top: #{$key}px;
+    }
+
+    .mr#{$key} {
+        margin-right: #{$key}px;
+    }
+
+    .mb#{$key} {
+        margin-bottom: #{$key}px;
+    }
+
+    .ml#{$key} {
+        margin-left: #{$key}px;
+    }
+
+    .p#{$key} {
+        padding: #{$key}px;
+    }
+
+    .pt#{$key} {
+        padding-top: #{$key}px;
+    }
+
+    .pr#{$key} {
+        padding-right: #{$key}px;
+    }
+
+    .pb#{$key} {
+        padding-bottom: #{$key}px;
+    }
+
+    .pl#{$key} {
+        padding-left: #{$key}px;
+    }
+
+    .fz#{$key} {
+        font-size: #{$key}px;
+    }
+
+    .lh#{$key} {
+        line-height: #{$key}px;
+    }
+}
+
+// 超出隐藏...
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+// 文字大小写
+@each $key in capitalize, uppercase, lowercase, none {
+    .text-#{$key} {
+        text-transform: #{$key};
+    }
+}
+
+.break-word {
+    word-break: break-word;
+}

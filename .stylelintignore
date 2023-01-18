@@ -1,0 +1,7 @@
+*.ts
+*.js
+*.jpg
+*.woff
+*.md
+index.html
+node_modules/*

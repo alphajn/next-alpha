@@ -1,0 +1,29 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "stylelint.validate": [
+    "css",
+    "less",
+    "postcss",
+    "scss",
+    "vue",
+    "sass"
+  ],
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "vue",
+    "html",
+    "json",
+    "jsonc",
+    "json5",
+    "markdown",
+    "yaml"
+  ]
+}
