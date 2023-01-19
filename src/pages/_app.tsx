@@ -1,17 +1,21 @@
 import '@/assets/styles/entry.scss';
 import React from 'react';
+import { ConfigProvider } from 'antd';
+import type { AppProps } from 'next/app';
 
-type Props = {
-    Component: typeof React.Component,
-    pageProps: any,
+const theme = {
+    token: {
+        colorPrimary: 'red',
+    },
 };
 
-export default function App({ Component, pageProps }: Props) {
+const App: React.FC<AppProps> = ({ Component, pageProps }) => {
     return (
-        <>
-            <main style={{ color: 'var(--color-main)' }}>dsf</main>
+        <ConfigProvider theme={theme}>
             {/* eslint-disable-next-line */}
             <Component {...pageProps} />
-        </>
+        </ConfigProvider>
     );
-}
+};
+
+export default App;
