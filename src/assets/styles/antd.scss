@@ -1,0 +1,108 @@
+// 下拉选择覆盖
+.ant-select {
+    .ant-select-selector {
+        background-color: var(--color-5) !important;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: var(--color-8) !important;
+        }
+    }
+
+    .ant-select-selection-item,
+    .ant-select-selection-search-input {
+        color: var(--color-3) !important;
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    .ant-select-arrow {
+        transition: all 0.3s ease-in-out;
+        color: var(--color-12);
+    }
+
+    &.ant-select-open:not(.ant-select-show-search) {
+        .ant-select-arrow {
+            transform: rotate(180deg);
+        }
+    }
+
+    &.ant-select-disabled {
+        .ant-select-selector {
+            background-color: var(--color-5) !important;
+
+            .ant-select-selection-item,
+            .ant-select-selection-search-input {
+                color: var(--color-12) !important;
+            }
+        }
+
+        .ant-select-arrow {
+            color: var(--color-10);
+        }
+    }
+
+    // form 表单位置样式
+    &.form-select {
+        width: 136px;
+
+        .ant-select-selector {
+            height: 40px;
+        }
+
+        .ant-select-selection-item,
+        .ant-select-selection-search-input {
+            height: 38px !important;
+            line-height: 38px;
+        }
+    }
+}
+
+// 下拉选择弹窗覆盖
+.ant-select-dropdown {
+    box-shadow: 0 0 0 1px var(--color-8), 0 2px 16px rgba(18, 18, 20, 0.1);
+
+    .ant-select-item {
+        color: var(--color-3);
+        font-size: 12px;
+        transition: all 0.3s ease-in-out;
+        border-radius: 6px;
+        padding: 4px 8px;
+        min-height: initial;
+
+        // 禁用色值
+        &.ant-select-item-option-disabled {
+            color: var(--color-11);
+        }
+
+        // active背景色
+        &-option-active:not(.ant-select-item-option-disabled) {
+            background-color: transparent;
+        }
+
+        // 选中样式
+        &-option-selected:not(.ant-select-item-option-disabled) {
+            color: var(--color-16);
+            font-weight: 500;
+            background-color: transparent;
+        }
+
+        // hover样式
+        &:not(.ant-select-item-option-selected, .ant-select-item-option-disabled):hover {
+            background-color: var(--color-8);
+            color: var(--color-3);
+            font-weight: 400;
+        }
+
+        .ant-select-item-option-content {
+            height: initial;
+            line-height: 18px;
+        }
+    }
+
+    // form表单下拉弹窗宽度设置
+    &.form-select-dropdown {
+        width: initial !important;
+        max-width: 160px;
+    }
+}

@@ -54,10 +54,23 @@ module.exports = {
         ],
         'arrow-body-style': 'off',
         'prefer-arrow-callback': 'off',
+        '@typescript-eslint/no-empty-function': 'off',
         'import/no-extraneous-dependencies': [
             'error',
             {
                 devDependencies: true,
+            },
+        ],
+        'no-underscore-dangle': [
+            'error',
+            {
+                allowInObjectDestructuring: true,
+            },
+        ],
+        'import/extensions': [
+            1,
+            {
+                extensions: ['.js', '.jsx', '.ts', '.tsx'],
             },
         ],
         'react/jsx-filename-extension': [

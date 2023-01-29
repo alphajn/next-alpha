@@ -4,9 +4,7 @@ import { ConfigProvider } from 'antd';
 import type { AppProps } from 'next/app';
 
 const theme = {
-    token: {
-        colorPrimary: 'red',
-    },
+    token: {},
 };
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {

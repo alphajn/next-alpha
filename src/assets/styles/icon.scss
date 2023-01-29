@@ -1,0 +1,30 @@
+@font-face {
+    font-family: icon;
+    src:
+        url("../font/icon/fonts/icon.ttf?huup0l") format("truetype"),
+        url("../font/icon/fonts/icon.woff?huup0l") format("woff"),
+        url("../font/icon/fonts/icon.svg?huup0l#icon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: icon, sans-serif !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-caret-down::before {
+    content: "\e900";
+}
