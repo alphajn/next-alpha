@@ -74,20 +74,21 @@
 }
 
 // 字体weight
-@each $key in normal, bold, 400, 500, 600 {
+@each $key in 400, 500, 600 {
     .weight-#{$key} {
         font-weight: #{$key};
     }
 }
 
 // 文字颜色和背景颜色
-@each $key in "main" {
+// stylelint-disable-next-line max-line-length
+@each $key in "gray-bg-page", "gray-bg-area", "static-black", "gray-bg-card", "gray-ele-line", "trans-hover", "trans-mask", "gray-ele-border", "static-gray-popup", "gray-t4-dis", "gray-t3", "gray-t2", "gray-t1-title", "static-white", "brand-700-normal", "brand-900-text", "brand-900-focus", "brand-600-hover", "brand-100-bg", "red-700-normal", "red-900-focus", "red-100-bg", "green-700-normal", "green-900-focus", "green-100-bg" {
     .text-#{$key} {
-        color: var(--#{$key});
+        color: var(--bds-#{$key});
     }
 
     .bg-#{$key} {
-        background-color: var(--#{$key});
+        background-color: var(--bds-#{$key});
     }
 }
 
@@ -157,6 +158,10 @@
 
     .lh#{$key} {
         line-height: #{$key}px;
+    }
+
+    .h#{$key} {
+        height: #{$key}px;
     }
 }
 

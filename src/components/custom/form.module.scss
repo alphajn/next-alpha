@@ -1,0 +1,13 @@
+.form {
+    gap: 16px;
+
+    :global {
+        .form-item {
+            max-width: 136px;
+
+            &[data-type="calendar"] {
+                max-width: 222px;
+            }
+        }
+    }
+}

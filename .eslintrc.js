@@ -44,6 +44,7 @@ module.exports = {
             },
         ],
         quotes: ['error', 'single'],
+        'no-unused-vars': 'off',
         'react/react-in-jsx-scope': 0,
         'prettier/prettier': [
             'error',
@@ -55,18 +56,14 @@ module.exports = {
         'arrow-body-style': 'off',
         'prefer-arrow-callback': 'off',
         '@typescript-eslint/no-empty-function': 'off',
+        '@typescript-eslint/no-unused-vars': 'error',
         'import/no-extraneous-dependencies': [
             'error',
             {
                 devDependencies: true,
             },
         ],
-        'no-underscore-dangle': [
-            'error',
-            {
-                allowInObjectDestructuring: true,
-            },
-        ],
+        'no-underscore-dangle': [0],
         'import/extensions': [
             1,
             {

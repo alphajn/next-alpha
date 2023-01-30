@@ -26,6 +26,12 @@ module.exports = {
         'max-nesting-depth': 4,
         'color-function-notation': 'legacy',
         'alpha-value-notation': 'number',
-        'no-descending-specificity': null
+        'no-descending-specificity': null,
+        "selector-pseudo-class-no-unknown": [
+            true,
+            {
+              "ignorePseudoClasses": ["global"]
+            }
+          ]
     }
 }

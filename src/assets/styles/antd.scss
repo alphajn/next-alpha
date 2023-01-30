@@ -1,48 +1,50 @@
 // 下拉选择覆盖
 .ant-select {
     .ant-select-selector {
-        background-color: var(--color-5) !important;
+        background-color: var(--bds-gray-ele-line) !important;
         border-radius: 4px;
 
         &:hover {
-            background-color: var(--color-8) !important;
+            background-color: var(--bds-gray-ele-border) !important;
         }
     }
 
     .ant-select-selection-item,
     .ant-select-selection-search-input {
-        color: var(--color-3) !important;
+        color: var(--bds-static-black) !important;
         font-weight: 500;
         font-size: 12px;
     }
 
     .ant-select-arrow {
         transition: all 0.3s ease-in-out;
-        color: var(--color-12);
+        color: var(--bds-gray-t2);
     }
 
+    // 展开下拉菜单小箭头样式
     &.ant-select-open:not(.ant-select-show-search) {
         .ant-select-arrow {
             transform: rotate(180deg);
         }
     }
 
+    // 禁用
     &.ant-select-disabled {
         .ant-select-selector {
-            background-color: var(--color-5) !important;
+            background-color: var(--bds-gray-ele-line) !important;
 
             .ant-select-selection-item,
             .ant-select-selection-search-input {
-                color: var(--color-12) !important;
+                color: var(--bds-gray-t2) !important;
             }
         }
 
         .ant-select-arrow {
-            color: var(--color-10);
+            color: var(--bds-gray-t4-dis);
         }
     }
 
-    // form 表单位置样式
+    // form表单位置的样式
     &.form-select {
         width: 136px;
 
@@ -60,10 +62,10 @@
 
 // 下拉选择弹窗覆盖
 .ant-select-dropdown {
-    box-shadow: 0 0 0 1px var(--color-8), 0 2px 16px rgba(18, 18, 20, 0.1);
+    box-shadow: 0 0 0 1px var(--bds-gray-ele-border), 0 2px 16px rgba(18, 18, 20, 0.1);
 
     .ant-select-item {
-        color: var(--color-3);
+        color: var(--bds-static-black);
         font-size: 12px;
         transition: all 0.3s ease-in-out;
         border-radius: 6px;
@@ -72,7 +74,7 @@
 
         // 禁用色值
         &.ant-select-item-option-disabled {
-            color: var(--color-11);
+            color: var(--bds-gray-t3);
         }
 
         // active背景色
@@ -82,15 +84,15 @@
 
         // 选中样式
         &-option-selected:not(.ant-select-item-option-disabled) {
-            color: var(--color-16);
+            color: var(--bds-brand-900-text);
             font-weight: 500;
             background-color: transparent;
         }
 
         // hover样式
         &:not(.ant-select-item-option-selected, .ant-select-item-option-disabled):hover {
-            background-color: var(--color-8);
-            color: var(--color-3);
+            background-color: var(--bds-gray-ele-border);
+            color: var(--bds-static-black);
             font-weight: 400;
         }
 

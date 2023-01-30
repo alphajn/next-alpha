@@ -20,7 +20,7 @@ const SuffixIcon = ({ loading, showSearch, opend }: SuffixIconProps) => {
         return <SearchOutlined />;
     }
 
-    return <i className="icon-caret-down fz16" />;
+    return <i className="icon-caret-down fz14" />;
 };
 
 const CustomSelect: React.FC<SelectProps> = (props: SelectProps) => {
